@@ -1,11 +1,11 @@
-if (exists('g:loaded_markdownview') && g:loaded_markdownview)
+if (exists('g:loaded_mdview') && g:loaded_mdview)
     finish
 endif
-let g:loaded_markdownview = 1
+let g:loaded_mdview = 1
 
-let g:markdown_command = 'echo'
-function! Markdownview()
-    execute "!" . g:markdown_command . " " . bufname("%")
+let g:mdview_command = 'echo'
+function! Mdview()
+    execute "!" . g:mdview_command . " " . bufname("%")
 endfunction
 
-nnoremap <buffer> pp :call Markdownview()<cr>
+nnoremap <buffer> pp :call Mdview()<cr>
